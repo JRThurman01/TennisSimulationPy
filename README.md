@@ -30,3 +30,5 @@ The modelling allows flexibility in the choice of probability functions that can
 * Current game features - e.g. Current set score, Current game score, is_it_break_point, is_it_match_point, who is serving, momentum, match length
 * Weather - e.g. Very hot, raining, clay/ grass
 * Court type - Clay, Hard, Grass
+
+It is upto the user to train/ tune the model to give a prediction based on the features
