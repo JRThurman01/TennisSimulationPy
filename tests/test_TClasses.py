@@ -119,7 +119,6 @@ class TestTset(TestCase):
         assert tset.get_current_score() == (3,3)
         assert(tset.set_winner is None)
 
-
 class TestMatch(TestCase):
 
     def test___init__(self):

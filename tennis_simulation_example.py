@@ -98,11 +98,19 @@ for round_number, round in match_histories.items():
         print(f'{player1["name"]}\t\t:' + ','.join([str(set.get_current_score()[1]) for set in matchobject['match'].set_history]))
 print(f'Competition Winner:{winner["name"]}')
 
+# Reviewing the last set in more detail
+print('\n', 'Point by point scoring in the final')
+final = match_histories[2][0]['match']
+player0 = match_histories[2][0]['player0']
+player1 = match_histories[2][0]['player1']
+
+for game in final.set_history[-1].game_history: #1st match in the 3rd round and last set
+    print(game)
 
 # Simulating running competition 1000 time
 winners = []
 for _ in tqdm(range(1000)):
     winner, match_histories = simulate_competition(playerlist, probability_model1)
     winners.append(winner['name'])
-print('Frequency of winners in 1000 simulations')
+print('\nFrequency of winners in 1000 simulations')
 print(Counter(winners))
